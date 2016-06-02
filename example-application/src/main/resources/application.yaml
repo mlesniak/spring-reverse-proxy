@@ -1,0 +1,12 @@
+server:
+  port: 8090
+
+spring:
+  main:
+    # Disable startup banner.
+    banner-mode: "off"
+    # Disable global startup logging from spring
+    log-startup-info: false
+
+  application:
+    name=config
