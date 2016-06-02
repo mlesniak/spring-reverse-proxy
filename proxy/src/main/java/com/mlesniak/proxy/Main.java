@@ -7,7 +7,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 
 /**
- * Entry point.
+ * This is a very simple configurable reverse-proxy.
+ *
+ * @author Michael Lesniak (mlesniak@micromata.de)
  */
 @EnableZuulProxy
 @SpringBootApplication
