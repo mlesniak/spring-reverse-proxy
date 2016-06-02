@@ -21,6 +21,7 @@ zuul:
 
 
 # See https://spring.io/guides/gs/routing-and-filtering/
+# Since we do not use eureka for service discovery we have to define url above.
 ribbon:
   eureka:
     enabled: false
