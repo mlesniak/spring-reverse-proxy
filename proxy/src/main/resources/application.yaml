@@ -9,7 +9,7 @@ spring:
     log-startup-info: false
 
   application:
-    name=proxy
+    name: proxy
 
 
 # Proxy configuration
