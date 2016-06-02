@@ -44,13 +44,11 @@ crashlytics.properties
 crashlytics-build.properties
 fabric.properties
 ### Java template
-*.class
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
 # Package Files #
-*.jar
 *.war
 *.ear
 
@@ -62,4 +60,4 @@ hs_err_pid*
 
 git.properties
 *.log
-
+**/target/
