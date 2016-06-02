@@ -1,0 +1,26 @@
+server:
+  port: 8080
+
+spring:
+  main:
+    # Disable startup banner.
+    banner-mode: "off"
+    # Disable global startup logging from spring
+    log-startup-info: false
+
+  application:
+    name=proxy
+
+
+# Proxy configuration
+zuul:
+  routes:
+    config:
+      path: /config/**
+      url: http://localhost:8090
+
+
+# See https://spring.io/guides/gs/routing-and-filtering/
+ribbon:
+  eureka:
+    enabled: false
