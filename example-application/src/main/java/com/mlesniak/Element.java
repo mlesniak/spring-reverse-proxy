@@ -1,8 +1,12 @@
 package com.mlesniak;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.PrePersist;
+import javax.persistence.PreUpdate;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+import java.util.Date;
 
 /**
  * Minimal entity to have an example for different SQL update techniques.
@@ -12,8 +16,10 @@ import javax.persistence.Id;
 @Entity
 public class Element {
     @Id
-    @GeneratedValue
     private String key;
+
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date modifiedAt;
 
     private String value;
 
@@ -31,5 +37,19 @@ public class Element {
 
     public void setValue(String value) {
         this.value = value;
+    }
+
+    public Date getModifiedAt() {
+        return modifiedAt;
+    }
+
+    public void setModifiedAt(Date modifiedAt) {
+        this.modifiedAt = modifiedAt;
+    }
+
+    @PrePersist
+    @PreUpdate
+    public void updateTimestamp() {
+        modifiedAt = new Date();
     }
 }
