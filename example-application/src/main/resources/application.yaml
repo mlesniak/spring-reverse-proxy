@@ -10,3 +10,8 @@ spring:
 
   application:
     name=config
+
+  datasource:
+    url: jdbc:h2:tcp://localhost//${user.dir}/database
+    username: sa
+    password:
