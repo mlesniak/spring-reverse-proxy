@@ -12,6 +12,15 @@ spring:
     name=config
 
   datasource:
-    url: jdbc:h2:tcp://localhost//${user.dir}/database
+    url: jdbc:h2:tcp://localhost//${user.dir}/database;SCHEMA=PUBLIC
     username: sa
     password:
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+
+  # See http://localhost:8090/h2-console
+  h2:
+    console:
+      enabled: true

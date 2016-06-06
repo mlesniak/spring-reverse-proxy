@@ -20,7 +20,7 @@
         <appender-ref ref="FILE_JSON"/>
     </logger>
 
-    <root level="warn">
+    <root level="INFO">
         <appender-ref ref="STDOUT"/>
         <appender-ref ref="FILE_JSON"/>
     </root>
