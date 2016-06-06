@@ -1,8 +1,8 @@
 # Introduction
 
-Simple reverse-proxy with spring-boot and zuul.
+This is a simple example of a reverse-proxy with spring-boot and zuul to provide support for deployments such as 
+[blue-green](http://martinfowler.com/bliki/BlueGreenDeployment.html) deployments.
 
-TODO Add reload description
 
 
     --spring.config.location=src/main/resources/application.yaml
@@ -10,3 +10,6 @@ TODO Add reload description
     
 * no delete    
 
+add startup scripts?
+ansible?
+eureka for service discovery
