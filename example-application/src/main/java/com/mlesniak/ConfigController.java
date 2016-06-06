@@ -22,7 +22,7 @@ public class ConfigController {
     private static final Logger LOG = LoggerFactory.getLogger(ConfigController.class);
 
     @Autowired
-    private StorageRepository repository;
+    private ElementRepository repository;
 
     @RequestMapping("/")
     public Map<String, String> getTarget() {
